@@ -8,117 +8,147 @@
 
     </head>
     <style>
-        body{
-            background-color: #171717;
-            }
-        .slides{
-            border: 7px solid #252525;
+        body {
+            background-color: #f6f6f6; /* Light gray background */
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  color: #333; /* Dark text color */
+        }
+    
+        .slides {
+            border: 7px solid #babcbc;
             display: grid;
-            grid-template-columns: 3fr 1fr ;
-            height: 550px;
-            }
+            grid-template-columns: 4fr 1fr;
+            height: 650px;
+        }
+    
         #canvas {
-            border: 7px solid #252525;
-            background-color: #171717;
-            border-radius: 5%;
-            margin: 30px;
-            }
-        .gp_filter{
+            border: 7px solid #ffffff;
+            background-color: #ffffff;
+            border-radius: 1%;
+            
+        }
+    
+        .gp_filter {
             margin: 15px;
             padding-left: 30px;
             padding-top: 20px;
-            border: 1px solid #252525;
+            border: 1px solid #babcbc;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
+            text-align: center;
         }
-        .filter label{
-           color: #babcbc;
-
-           
+    
+        .filter label {
+            color: #333333;
         }
-      
-        #imgId{
+    
+        #imgId {
             width: 900px;
             height: 450px;
             border-radius: 5%;
-            text-align:center;
+            text-align: center;
             padding: 10px;
-
-            display:flex;
-
-        }   
-        .navigation-manuel{
-            margin-top: 5px;
-            padding: 10px;
-            border: 1px solid #252525;
-            display: grid;
-            border: 1px solid #252525;
-            grid-template-columns: 3fr 1fr 5fr 5fr;
-            
-
+            display: flex;
         }
-        .button{
-            display: inline-flex;
-            /*height: 30x;*/
-            border-radius: 3px;
-            background: #252525;
-            border: 0.5px solid #babcbc;
-            text-align:center;
-            overflow: hidden;
-            font-family: 'Quicksand',sans-serif;
-            cursor: pointer;
-       
-            
-        } 
-        #vidplay{
-           
+    
+        
+    
+        /* Hyperlink styles */
+a {
+  color: #007bff; /* Blue link color */
+  font-style: italic;
+}
+
+/* Paragraph styles */
+p {
+  color: #333; /* Dark text color */
+  font-size: 15px;
+  border-radius: 5px; /* Rounded corners */
+}
+
+/* Button styles */
+button{
+  background-color: #f0f0f0; /* Very light shade */
+  color: #333; /* Dark text color */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners */
+  font-size: 15px;
+  cursor: pointer;
+  padding: 10px 20px; /* Add padding */
+}
+
+/* Button hover/focus styles */
+button:hover, button:focus {
+  background-color: #e0e0e0; /* Lighter shade on hover/focus */
+}
+
+/* Hover/focus styles for links */
+a:hover, a:focus {
+  color: #0056b3; /* Darker blue on hover/focus */
+  cursor: pointer;
+}
+
+/* Styles for headings */
+b {
+  font-style: italic;
+  font-size: 15px;
+}
+
+/* Italics styles */
+i {
+  color: #6c757d; /* Gray color for italics */
+}
+
+/* Input field styles */
+input {
+  background-color: #333333; /* White background */
+  border: 1px solid #ccc; /* Light gray border */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px; /* Add padding */
+}
+    
+        #vidplay {
             display: inline-flex;
             width: 90px;
             height: 30px;
-            /*height: 30x;*/
             border-radius: 3px;
-            color: #babcbc;
-            background: #AB3939;
-            border: 0.5px solid #babcbc;
-            text-align:center;
+            color: #ffffff;
+            background: #fffdfd;
+            border: 1px solid #babcbc;
+            text-align: center;
             overflow: hidden;
-            font-family: 'Quicksand',sans-serif;
+            font-family: 'Quicksand', sans-serif;
             cursor: pointer;
-       
-            
+            transition: background-color 0.3s ease;
+        }
+    
         
-        }
-        .button:hover{
-            background:#babcbc ;
-        }
-        .button:active{
-            background: #171717;
-        }
-        .button_icon{
+    
+        .button_icon {
             margin: 2px;
             padding-right: 8px;
             padding-left: 2px;
-            color: #babcbc;
+            color: #000000;
         }
-        .button_text{
+    
+        .button_text {
             padding: 3px;
-            font-size:12px;
-            color: #babcbc;
+            font-size: 12px;
+            color: #000000;
         }
-
-        .ensemble_btn{
-            background-color: #252525;
+    
+        .ensemble_btn {
+            background-color: #ffffff;
             padding-left: 9px;
             padding-top: 5px;
             padding-bottom: 3px;
-            width: 345px;
-            height: 28px;
+            text-align: center;
             
-    
         }
-        .img_pl{
-            color: #babcbc;
+    
+        .img_pl {
+            color: #333333;
             text-align: center;
             font-size: bold;
             font-size: 15px;
@@ -126,56 +156,88 @@
             margin-left: 5px;
             width: 90px;
             height: 25px;
-            background-color: #252525;
+            background-color: #ffffff;
         }
-        .formfile{
-           
-            width: 142px;
-            margin-left: 100px;
-            padding-left: 12px;
-            padding-top: 8px;
-            background-color: #252525;
+    
+        .formfile {
+            
+            background-color: #ffffff;
+            text-align: center;
         }
-        input[type="file"]{
-            display:none;
+    
+        input[type="file"] {
+            display: none;
         }
-        .formfile label{
+    
+        .formfile label {
+    cursor: pointer;
+    color: #333333;
+    background-color: #ffffff;
+    border-radius: 3px;
+    border: 0.5px solid #babcbc;
+    text-align: center;
+    
+    font-family: 'Quicksand', sans-serif;
+    font-size: 12px;
+    padding: 3px;
+    white-space: nowrap; /* Prevent line breaks */
+    margin-right: 3px;
+}
+
+    
+        #submit {
             cursor: pointer;
-            color: #babcbc;
-            background-color: #252525;
+            color: #ffffff;
             border-radius: 3px;
             border: 0.5px solid #babcbc;
-            text-align:center;
+            text-align: center;
             overflow: hidden;
-            font-family: 'Quicksand',sans-serif;
-            font-size: 12px;
-            padding: 3px;
-            width: 300px;
-            margin-right: 3px;
-
+            font-family: 'Quicksand', sans-serif;
         }
-       
-        #submit{
-            cursor: pointer;
-            color: #252525;
-            border-radius: 3px;
-            border: 0.5px solid #babcbc;
-            text-align:center;
-            overflow: hidden;
-            font-family: 'Quicksand',sans-serif;
-        }
-
-   
-
     </style>
+    
     <body>
         <div class="slider">
             <div class="slides">
             
                 <figure id="canvas">
                   <img src= "" id="imgId">
+                  <div class="ensemble_btn"> <!-- Buttons for navigation and actions -->
+                    <!-- Button for going to the previous image -->
+                    <button value="Back" id="back" class="button">
+                        <span class="button_icon">
+                            <ion-icon name="arrow-back-outline"></ion-icon>
+                        </span>
+                        <span class="button_text">Previous</span>
+                    </button>
+                    <!-- Button for going to the next image -->
+                    <button value="Next" id="next" class="button">
+                        <span class="button_icon">
+                            <ion-icon name="arrow-forward-outline"></ion-icon>
+                        </span>
+                        <span class="button_text">Next</span>
+                    </button>
+                    <!-- Button for saving the image after modification -->
+                    <button value="Save Image" id="save" class="button">
+                        <span class="button_icon">
+                            <ion-icon name="download-outline"></ion-icon>
+                        </span>
+                        <span class="button_text">Save</span>
+                    </button>
+                    <!-- Button for deleting the current image -->
+                    <button value="Delete Image" id="delete" class="button">
+                        <span class="button_icon">
+                            <ion-icon name="trash-outline"></ion-icon>
+                        </span>
+                        <span class="button_text">Delete</span>
+                    </button>
+                </div>
+
 
                 </figure>
+
+                
+                
                 <div class="gp_filter">
                     <div class="filter" id="filter">
                         <span class="button_icon">
@@ -209,65 +271,36 @@
                         <label for="sepia">Sepia</label>
                         <input type="range" min="0" max="100" value="0" id="sepia">
                     </div>
+                    
                 </div>
 
+                
 
-                <canvas id="canvass" width="100" height="100">
-                    <img src="" id="imagesource">
-                </canvas>
 
+                
                                
              
 
             </div>
             <div class="navigation-manuel">
-                <span class="img_pl">Image Player</span>
-                <div class="ensemble_btn">
-                    <!-- Bouton pour passer a l image suivante-->
-                    <button value="Next" id="next" class="button">
-                        <span class="button_icon">
-                            <ion-icon name="arrow-back-outline"></ion-icon>
-                        </span>
-                        <span class="button_text">Next</span>
-                    </button>
-                    <!-- Bouton pour passer a l image d avant-->
-                    <button value="Back" id="back" class="button">
-                        <span class="button_icon">
-                            <ion-icon name="arrow-forward-outline"></ion-icon>
-                        </span>
-                        <span class="button_text">Previous</span>
-                    </button>
-                    <!-- Bouton pour enregistrer  l image apres modification-->
-                    <button value="Save Image" id="save" class="button">
-                        <span class="button_icon">
-                            <ion-icon name="download-outline"></ion-icon>
-                        </span>
-                        <span class="button_text">Save</span>
-                    </button>
-                    <!-- Bouton pour supprimer l image en cours-->
-                    <button value="Delete Image" id="delete" class="button">
-                        <span class="button_icon">
-                            <ion-icon name="trash-outline"></ion-icon>
-                        </span>
-                        <span class="button_text">Delete</span>
-                    </button>
-
-                    
-
-
-                    
-                </div>
-                <div class="formfile">
-                    <form action="/img" enctype="multipart/form-data" method=post>
-                        <input type="file" id="uploader"  name="uploader" accept="Image/*">
-                        <label for="uploader">Choose Image</label> 
-                        <input type="submit" id="submit" value="Add">
+                
+                <div class="formfile"> <!-- Form for uploading images -->
+                    <form action="/img" enctype="multipart/form-data" method="post">
+                        <input type="file" id="uploader" name="uploader" accept="image/*">
+                        <label for="uploader" class="button">
+                            <span class="button_icon">
+                                <ion-icon name="cloud-upload-outline"></ion-icon>
+                            </span>
+                            <span class="button_text">Choose Image</span>
+                        </label>
+                        <input type="submit" id="submit" value="Add" class="button">
                     </form>
                 </div>
+            </div>
+            
                
 
-                <form action="/vidPlay" method="get"><input type="submit" id="vidplay" value="Video Player"></form>
-
+                
 
             </div>
 
