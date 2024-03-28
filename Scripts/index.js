@@ -20,7 +20,7 @@ async function loaddata() {
         var playlist = document.querySelector(".play")
         for (i = 0; i < results.length; i++) {
             console.log(results.length)
-            playlist.innerHTML = playlist.innerHTML + " <tr> <p id='" + results[i]['id'] + "'>" + results[i]['name'] + "</p> </tr>"
+            playlist.innerHTML = playlist.innerHTML + " <td> <p id='" + results[i]['id'] + "'>" + results[i]['name'] + "</p> </td>"
         }
         const play = sessionStorage.getItem('play')
         if (play !== null) {

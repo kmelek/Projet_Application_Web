@@ -7,9 +7,27 @@
 </head>
 
 <body>
+
+    <nav>
+        <div class="logo">MusicPlayer</div>
+        <ul class="nav-links">
+          <li><a href="#">Accueil</a></li>
+          <li><a href="#">Images</a></li>
+          <li><a href="#">Videos</a></li>
+          
+        </ul>
+        <div class="search-bar">
+          <input type="text" placeholder="Recherche...">
+          <button type="submit">Rechercher</button>
+        </div>
+      </nav>
     <div id="wrapper">
+
+
+        
         <div id="up">
             <div id="player">
+                
                 <fieldset id="fieldp">
                     <video id="videoPlayer" id="vid" class="vidtag" width="100.5%" preload="none" controls autoplay>
                         <div class="vidtag" id="inner"></div>
@@ -39,7 +57,7 @@
                         
                         <fieldset id="addf">
                             <div id="add">
-                                <button value="Start" id="addbtn"><i class="fa fa-plus"> Add </i></button>
+                                <button value="Start" id="addbtn"><i class="fa fa-plus"></i> <span>Add</span></button>
                                 <!-- Pop up de l'ajout -->
                                 <div id="myModal" class="modal">
                                     <!-- Modal content -->
@@ -64,7 +82,7 @@
                                     </div>
                                 </div>
                                 <!--******************-->
-                                <button value="delete" id="delete"><i class="fa fa-trash"></i></button>
+                                <button value="delete" id="delete"><i class="fa fa-trash"> <span id="col">Del</span></i></button>
                                 <!-- Pop up de la suppression -->
                                 <div id="myModals" class="modals">
                                     <!-- Modal content -->
@@ -96,10 +114,20 @@
                 </fieldset>
             </div>
             <div id="media">
-                <fieldset class="play">
+                <table class="play">
                     
-                    <legend><b>Playlist</b></legend>
-                </fieldset>
+                    <thead>
+                        <tr>
+                            <th>Nom de la vidéo</th>
+                            
+                            
+                        </tr>
+                    </thead>
+                    <tbody id="videoBody">
+                       
+                    </tbody>
+                </table>
+            </table>
             </div>
         </div>
     </div>
