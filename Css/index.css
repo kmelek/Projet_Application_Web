@@ -484,3 +484,6 @@ nav {
     flex-wrap: wrap;
   }
 }
+.cursor-pointer{
+  cursor: pointer;
+}

@@ -41,6 +41,7 @@ var sock = io.sockets.on('connection', function (socket) {
   list = im
   //console.log(list)
   socket.emit('firstimage', list[0]);
+  socket.emit('list',list);
   var length = list.length
   socket.emit('length', length)
   socket.on('nb', (arg) => {
